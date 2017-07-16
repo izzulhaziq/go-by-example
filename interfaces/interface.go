@@ -28,11 +28,8 @@ func ExecuteCommands(commands ...Command) {
 }
 
 func main() {
-	var helloAnjanaCmd = new(HelloCommand)
-	helloAnjanaCmd.name = "Anjana"
-
-	var helloMichelleCmd = new(HelloCommand)
-	helloMichelleCmd.name = "Michelle"
+	var helloAnjanaCmd = &HelloCommand{name: "Anjana"}
+	var helloMichelleCmd = &HelloCommand{name: "Michelle"}
 
 	commands := []Command{
 		helloAnjanaCmd,
